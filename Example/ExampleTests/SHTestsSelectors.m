@@ -71,6 +71,38 @@
   
 }
 
+-(void)testSH_setDidChangeBlock;{
+  SHTextViewBlock block = ^(UITextView * textView) {
+    
+  };
+  
+  [self.textView SH_setDidChangeBlock:block];
+  
+  STAssertEqualObjects(self.textView.SH_blockDidChange, block, nil);
+  
+  
+  [self.textView SH_setDidChangeBlock:nil];
+  STAssertNil(self.textView.SH_blockDidChange, nil);
+  
+  
+}
+
+-(void)testSH_setDidChangeSelection;{
+  SHTextViewBlock block = ^(UITextView * textView) {
+    
+  };
+  
+  [self.textView SH_setDidChangeSelection:block];
+  
+  STAssertEqualObjects(self.textView.SH_blockDidChangeSelection, block, nil);
+  
+  
+  [self.textView SH_setDidChangeSelection:nil];
+  STAssertNil(self.textView.SH_blockDidChangeSelection, nil);
+
+  
+}
+
 
 
 @end

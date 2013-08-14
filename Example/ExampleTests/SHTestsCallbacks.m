@@ -80,4 +80,39 @@
   
 }
 
+-(void)testSH_setDidChangeBlock;{
+  __block BOOL didAssert = NO;
+  SHTextViewBlock block = ^(UITextView * textView) {
+    STAssertEqualObjects(self.textView, textView, nil);
+    didAssert = YES;
+  };
+  
+  [self.textView SH_setDidChangeBlock:block];
+  
+  self.textView.SH_blockDidChange(self.textView);
+  STAssertTrue(didAssert, nil);
+
+  
+  
+}
+
+-(void)testSH_setDidChangeSelection;{
+    __block BOOL didAssert = NO;
+  SHTextViewBlock block = ^(UITextView * textView) {
+    STAssertEqualObjects(self.textView, textView, nil);
+    didAssert = YES;
+  };
+  
+  [self.textView SH_setDidChangeSelection:block];
+  
+  self.textView.SH_blockDidChangeSelection(self.textView);
+  STAssertTrue(didAssert, nil);
+
+  
+  
+  
+  
+}
+
+
 @end

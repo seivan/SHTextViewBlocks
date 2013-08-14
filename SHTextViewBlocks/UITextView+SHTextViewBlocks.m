@@ -219,7 +219,7 @@ SHStaticConstString(SH_blockDidChangeSelection);
 }
 
 
--(SHTextViewBlock)SH_blockDidChangeBlock; {
+-(SHTextViewBlock)SH_blockDidChange; {
   return [self.mapBlocks objectForKey:SH_blockDidChange];
   
 }
