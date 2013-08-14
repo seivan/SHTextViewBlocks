@@ -8,7 +8,7 @@
 
 ##Overview
 
-Using blocks instead of delegate callbacks for UITextField. The blocks are gone once the textfield is gone - Swizzle Free(™)
+Using blocks instead of delegate callbacks for SHTextViewBlocks. The blocks are gone once the textfield is gone - Swizzle Free(™)
 
 ##Installation
 
@@ -84,8 +84,8 @@ NSString * string);
 ```
 
 
-Contact
--------
+##Contact
+
 
 If you end up using SHTextViewBlocks in a project, I'd love to hear about it.
 

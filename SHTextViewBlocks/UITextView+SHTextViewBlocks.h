@@ -53,7 +53,7 @@ NSString * string);
 
 -(SHTextViewRangeReplacementBlock)SH_blockShouldChangeCharactersInRangeWithReplacementText;
 
--(SHTextViewBlock)SH_blockDidChangeBlock;
+-(SHTextViewBlock)SH_blockDidChange;
 
 -(SHTextViewBlock)SH_blockDidChangeSelection;
 

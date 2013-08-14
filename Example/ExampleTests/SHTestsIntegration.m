@@ -79,12 +79,42 @@
   
     [tester enterText:expectedString intoViewWithAccessibilityLabel:self.textView.accessibilityLabel];
     STAssertTrue(didAssert, nil);
+}
 
+-(void)testSH_setDidChangeBlock;{
+  __block BOOL didAssert = NO;
+  SHTextViewBlock block = ^(UITextView * textView) {
+    STAssertEqualObjects(self.textView, textView, nil);
+    didAssert = YES;
+  };
+  
+  [self.textView SH_setDidChangeBlock:block];
+  [tester enterText:@"Seivan" intoViewWithAccessibilityLabel:self.textView.accessibilityLabel];
 
-
+  STAssertTrue(didAssert, nil);
   
   
   
 }
+
+-(void)testSH_setDidChangeSelection;{
+  __block BOOL didAssert = NO;
+  SHTextViewBlock block = ^(UITextView * textView) {
+    STAssertEqualObjects(self.textView, textView, nil);
+    didAssert = YES;
+  };
+  
+  [self.textView SH_setDidChangeSelection:block];
+  [tester enterText:@"Seivan" intoViewWithAccessibilityLabel:self.textView.accessibilityLabel];
+  
+
+  STAssertTrue(didAssert, nil);
+  
+  
+  
+  
+  
+}
+
 
 @end
