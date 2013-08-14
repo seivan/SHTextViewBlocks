@@ -84,8 +84,8 @@ NSString * string);
 ```
 
 
-Contact
--------
+##Contact
+
 
 If you end up using SHTextViewBlocks in a project, I'd love to hear about it.
 
