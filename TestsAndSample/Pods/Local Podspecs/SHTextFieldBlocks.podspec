@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
-  name           = "SHTextViewBlocks"
+  name           = "SHTextFieldBlocks"
   url            = "https://github.com/seivan/#{name}"
   git_url        = "#{url}.git"
-  version        = "1.1.0"
+  version        = "1.0.0"
   source_files   = "#{name}/**/*.{h,m}"
 
   s.name         = name
   s.version      = version
-  s.summary      = "Prefixed UITextView category replacing delegate calls with blocks. without libffi and swizzling."
+  s.summary      = "Prefixed UITextField category replacing delegate calls with blocks. without libffi and swizzling."
   s.description  = <<-DESC
 
                     Delegate callbacks via blocks.
