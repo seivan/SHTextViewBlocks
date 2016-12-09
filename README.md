@@ -1,3 +1,5 @@
+Deprecated, please use [RxCocoa](https://github.com/ReactiveX/RxSwift) 
+
 #SHTextViewBlocks
 
 [![CI Status](https://img.shields.io/travis/seivan/SHTextViewBlocks.svg?style=flat)](https://travis-ci.org/seivan/SHTextViewBlocks)
